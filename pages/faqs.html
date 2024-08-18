@@ -13,25 +13,45 @@
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <!-- ENCABEZADO -->
     <header>
         <!-- BARRA navegacion -->
-        <nav class="grid-navegacion">
-            <!-- LOGO -->
-            <a href="../index.html"><img src="../assets/images/logo-blanco-sin-fondo.png"
-                    alt="donaciones libreando"></a>
-            <!-- LISTAS DE ENLACES -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./testimonios.html">Testimonios</a></li>
-                <li><a href="./impacto.html">Impacto</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./faqs.html">FAQs</a></li>
-                <li><a href="https://www.libreando.com.ar" target="_blank">Libreando</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a href="https://www.libreando.com.ar" target="_blank"><img
+                        src="../assets/images/logo-blanco-sin-fondo.png" alt="donaciones libreando"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="navbar-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navbar-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                más
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item-lib" href="./testimonios.html">Testimonios</a></li>
+                                <li><a class="dropdown-item-lib" href="./impacto.html">Impacto</a></li>
+                                <li><a class="dropdown-item-lib" href="./contacto.html">Contacto</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item-lib" href="./faqs.html">FAQs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn-lib" type="submit">buscar</button>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
@@ -96,6 +116,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

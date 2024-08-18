@@ -13,25 +13,45 @@
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <!-- ENCABEZADO -->
     <header>
         <!-- BARRA navegacion -->
-        <nav class="grid-navegacion">
-            <!-- LOGO -->
-            <a href="../index.html"><img src="../assets/images/logo-blanco-sin-fondo.png"
-                    alt="donaciones libreando"></a>
-            <!-- LISTAS DE ENLACES -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./testimonios.html">Testimonios</a></li>
-                <li><a href="./impacto.html">Impacto</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./faqs.html">FAQs</a></li>
-                <li><a href="https://www.libreando.com.ar" target="_blank">Libreando</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a href="https://www.libreando.com.ar" target="_blank"><img
+                        src="../assets/images/logo-blanco-sin-fondo.png" alt="donaciones libreando"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="navbar-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navbar-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                más
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item-lib" href="./testimonios.html">Testimonios</a></li>
+                                <li><a class="dropdown-item-lib" href="./impacto.html">Impacto</a></li>
+                                <li><a class="dropdown-item-lib" href="./contacto.html">Contacto</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item-lib" href="./faqs.html">FAQs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn-lib" type="submit">buscar</button>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
     <!-- CONTENIDO PRINCIPAL -->
@@ -42,51 +62,108 @@
             <p>El mundo de los libros nos abre puertas a un sinfín de conocimientos y aventuras. Sin embargo, detrás de
                 cada página impresa se esconde un impacto ambiental que no podemos ignorar. La industria editorial, a
                 pesar de su innegable valor cultural, genera una huella ecológica considerable.</p>
-            <img src="../assets/images/libro-sustentable.jpg" alt="libro-abierto">
-            <h2>El papel: protagonista de la huella ambiental</h2>
-            <p>La producción de papel es uno de los principales causantes del impacto ambiental de la industria del
-                libro. Los árboles, fuente principal de la materia prima, se talan a un ritmo alarmante, lo que genera
-                deforestación, pérdida de biodiversidad y erosión del suelo. Según un estudio de 2012, la producción de
-                un solo libro puede implicar la emisión de casi 3 kg de CO2 y requerir más de 2 kWh de energía. Se
-                estima que cada año se talan 15 mil millones de árboles para la producción de libros.</p>
-            <h2>Más allá del papel: otros factores a considerar</h2>
-            <p>La impresión y distribución de libros también contribuyen significativamente al impacto ambiental. El uso
-                de maquinaria pesada, el transporte de materiales y la generación de residuos sólidos son solo algunos
-                de los aspectos que debemos tener en cuenta.</p>
-            <h2>¿Qué podemos hacer como lectores y como comunidades?</h2>
-            <p>Si bien la industria editorial tiene un largo camino por recorrer para minimizar su huella ecológica,
-                como lectores y usuarios de libros, podemos adoptar algunas medidas para reducir nuestro impacto.</p>
-            <h4>El intercambio de libros: una alternativa sostenible</h4>
-            <p>Las plataformas online y físicas de intercambio de libros son una excelente manera de acceder a nuevos
-                títulos sin generar residuos ni consumir recursos adicionales. Al fomentar la reutilización y el
-                intercambio, estas iniciativas contribuyen a reducir el impacto ambiental de la industria editorial y
-                promueven una cultura de consumo más responsable.</p>
-            <h4>Comprar libros de segunda mano</h4>
-            <p>Intercambiar o comprar libros usados ​​es una excelente manera de darles una nueva vida y evitar la
-                producción de nuevos ejemplares. Plataformas online y tiendas especializadas ofrecen una amplia variedad
-                de opciones.</p>
-            <h4>Donar libros</h4>
-            <p>Si tenés libros que ya no leés, donarlos es una forma de asegurarte de que lleguen a otras personas y no
-                terminen en la basura.</p>
-            <h4>Considerar el formato electrónico</h4>
-            <p>Si bien los libros físicos tienen un encanto inigualable, los libros electrónicos pueden ser una
-                alternativa más sostenible, especialmente para libros que no requieren una gran calidad de impresión. Un
-                estudio reciente encontró que la producción de un libro electrónico tiene una huella de carbono hasta un
-                90% menor que la de un libro impreso.</p>
-            <h4>Apoyar editoriales comprometidas con la sostenibilidad</h4>
-            <p>Cada vez más editoriales están adoptando prácticas ecoamigables, como el uso de papel reciclado, tintas
-                no tóxicas y procesos de impresión eficientes. Investigá qué editoriales están tomando medidas para
-                reducir su impacto ambiental y elegí apoyarlas.</p>
-            <img src="../assets/images/lectura-naturaleza.jpg" alt="lecturas-naturaleza">
-            <h2>Un futuro sostenible para la industria del libro</h2>
-            <p>La industria del libro tiene la responsabilidad de adoptar prácticas más sostenibles en toda su cadena de
-                producción, desde la selección de materias primas hasta la distribución y el manejo de residuos. La
+            <div class="img-libro">
+                <img src="../assets/images/libro-sustentable.jpg" alt="libro-abierto">
+            </div>
+            <div class="grid-container">
+                <div class="huella">
+                    <h2>El papel: protagonista de la huella ambiental</h2>
+                    <p>La producción de papel es uno de los principales causantes del impacto ambiental de la industria
+                        del
+                        libro. Los árboles, fuente principal de la materia prima, se talan a un ritmo alarmante, lo que
+                        genera
+                        deforestación, pérdida de biodiversidad y erosión del suelo. Según un estudio de 2012, la
+                        producción de
+                        un solo libro puede implicar la emisión de casi 3 kg de CO2 y requerir más de 2 kWh de energía.
+                        Se
+                        estima que cada año se talan 15 mil millones de árboles para la producción de libros.</p>
+                </div>
+                <div class="huella-img">
+                    <img src="../assets/images/huella.jpg" alt="huella-ambiental">
+                </div>
+                <div class="huella-img">
+                    <img src="../assets/images/fabrica.jpg" alt="fabrica">
+                </div>
+                <div class="factores">
+                    <h2>Más allá del papel: otros factores a considerar</h2>
+                    <p>La impresión y distribución de libros también contribuyen significativamente al impacto
+                        ambiental. El
+                        uso
+                        de maquinaria pesada, el transporte de materiales y la generación de residuos sólidos son solo
+                        algunos
+                        de los aspectos que debemos tener en cuenta.</p>
+                </div>
+                <div class="comunidades">
+                    <h2>¿Qué podemos hacer como lectores y como comunidades?</h2>
+                    <p>Si bien la industria editorial tiene un largo camino por recorrer para minimizar su huella
+                        ecológica,
+                        como lectores y usuarios de libros, podemos adoptar algunas medidas para reducir nuestro
+                        impacto.
+                    </p>
+                </div>
+                <div class="grid-img">
+                    <img src="../assets/images/lectura-naturaleza.jpg" alt="lecturas-naturaleza">
+                </div>
+                <div class="individual">
+                    <h4>#1 El intercambio de libros: una alternativa sostenible</h4>
+                    <p>Las plataformas online y físicas de intercambio de libros son una excelente manera de acceder a
+                        nuevos
+                        títulos sin generar residuos ni consumir recursos adicionales. Al fomentar la reutilización y el
+                        intercambio, estas iniciativas contribuyen a reducir el impacto ambiental de la industria
+                        editorial
+                        y
+                        promueven una cultura de consumo más responsable.</p>
+                </div>
+                <div class="individual">
+                    <h4>#2 Comprar libros de segunda mano</h4>
+                    <p>Intercambiar o comprar libros usados ​​es una excelente manera de darles una nueva vida y evitar
+                        la
+                        producción de nuevos ejemplares. Plataformas online y tiendas especializadas ofrecen una amplia
+                        variedad
+                        de opciones.</p>
+                    <h4>#3 Donar libros</h4>
+                    <p>Si tenés libros que ya no leés, donarlos es una forma de asegurarte de que lleguen a otras
+                        personas y
+                        no
+                        terminen en la basura.</p>
+                </div>
+                <div class="individual">
+                    <h4>#4 Considerar el formato electrónico</h4>
+                    <p>Si bien los libros físicos tienen un encanto inigualable, los libros electrónicos pueden ser una
+                        alternativa más sostenible, especialmente para libros que no requieren una gran calidad de
+                        impresión. Un
+                        estudio reciente encontró que la producción de un libro electrónico tiene una huella de carbono
+                        hasta un
+                        90% menor que la de un libro impreso.</p>
+                </div>
+                <div class="grid-img">
+                    <img src="../assets/images/sostenibilidad.jpg" alt="sostenibilidad">
+                </div>
+                <div class="individual-center">
+                    <h4>#5 Apoyar editoriales comprometidas con la sostenibilidad</h4>
+                    <p>Cada vez más editoriales están adoptando prácticas ecoamigables, como el uso de papel reciclado,
+                        tintas
+                        no tóxicas y procesos de impresión eficientes. Investigá qué editoriales están tomando medidas
+                        para
+                        reducir su impacto ambiental y elegí apoyarlas.</p>
+                </div>
+            </div>
+            <h2>futuro sostenible para la industria del libro</h2>
+            <p>La industria del libro tiene la responsabilidad de adoptar prácticas más sostenibles en toda su
+                cadena de
+                producción, desde la selección de materias primas hasta la distribución y el manejo de residuos.
+                La
                 implementación de tecnologías ecoeficientes, el uso de materiales reciclados y la búsqueda de
-                alternativas al papel tradicional son algunos de los pasos que se pueden tomar en esta dirección.</p>
+                alternativas al papel tradicional son algunos de los pasos que se pueden tomar en esta
+                dirección.
+            </p>
             <h2>Un compromiso compartido</h2>
-            <p>El cuidado del medio ambiente es un compromiso que nos involucra a todos. Como lectores, podemos ser
-                agentes de cambio al adoptar hábitos de consumo responsable y apoyar iniciativas que promuevan la
-                sostenibilidad en la industria del libro. Juntos podemos construir un futuro donde el acceso a la
+            <p>El cuidado del medio ambiente es un compromiso que nos involucra a todos. Como lectores, podemos
+                ser
+                agentes de cambio al adoptar hábitos de consumo responsable y apoyar iniciativas que promuevan
+                la
+                sostenibilidad en la industria del libro. Juntos podemos construir un futuro donde el acceso a
+                la
                 cultura y la protección del planeta vayan de la mano.</p>
         </section>
     </main>
@@ -115,6 +192,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

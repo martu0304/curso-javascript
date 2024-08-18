@@ -41,6 +41,10 @@ h4 {
     text-align: center;
 }
 
+h5 {
+    text-align: center;
+}
+
 header {
     font-family: 'riftsoft-regular', sans-serif;
     font-size: 1.2rem;
@@ -48,7 +52,7 @@ header {
     height: 10vh;
 }
 
-.grid-navegacion {
+.container-fluid {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
@@ -63,29 +67,54 @@ header {
     padding: 10px;
 }
 
-.grid-navegacion a img {
+.navbar-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 0 0 10px;
+}
+
+.navbar-link:hover {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown-menu.show {
+    background-color: #6454d1;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown-item-lib {
+    display: block;
+    background-color: #6454d1;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown-item-lib:hover {
+    background-color: #ffffff;
+    color: #6454d1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container-fluid a img {
     width: 70px;
 }
 
-.grid-navegacion ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: right;
-    padding: 0;
-    margin: 0;
+.btn-lib {
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    background-color: #6454d1;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 
-.grid-navegacion ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.grid-navegacion ul li a:hover {
-    font-family: 'riftsoft-demi', 'sans-serif';
-    color: #ffffff;
-    text-decoration: none;
+.btn-lib:hover {
+    background-color: #ff158a;
+    font-weight: bold;
 }
 
 main {
@@ -127,8 +156,6 @@ main {
     width: 90%;
     margin: 20px 0 20px 0;
 }
-
-
 
 /* -----------INDEX----------- */
 
@@ -257,7 +284,89 @@ main {
 
 /* -----------IMPACTO----------- */
 
+.img-libro {
+    text-align: center;
+    width: 70%;
+    object-fit: cover;
+}
 
+.grid-container {
+    width: 80%;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.huella {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.huella-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 2;
+}
+
+.factores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+}
+
+.comunidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.individual {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.individual-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 2;
+}
+
+.grid-container-doble {
+    width: 80%;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    text-align: center;
+}
 
 /* -----------CONTACTO----------- */
 
@@ -266,10 +375,10 @@ main {
     border-radius: 25px;
     text-align: center;
     padding: 15px;
-    background-color:rgb(233, 233, 233);
-} 
+    background-color: rgb(233, 233, 233);
+}
 
-.form div { 
+.form div {
     justify-content: center;
     align-items: center;
     text-align: left;
@@ -316,7 +425,6 @@ main {
 
 }
 
-
 /* -----------FOOTER----------- */
 
 .footer {
@@ -361,6 +469,52 @@ main {
     margin: 5px 10px 5px 0px;
 }
 
+/* -----------MEDIA QUERIES----------- */
+
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        width: 80%;
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+    }
+
+    .img-libro {
+        width: 80%;
+    }
+
+    .huella {
+        grid-column: span 1;
+    }
+
+    .huella-img {
+        grid-column: span 1;
+
+    }
+
+    .factores {
+        grid-column: span 1;
+    }
+
+    .comunidades {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .individual {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .individual-center {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+}
+
 @media screen and (max-width: 900px) {
     .grid-galeria {
         width: 80%;
@@ -375,37 +529,53 @@ main {
         grid-column: span 2;
         grid-row: span 1;
     }
+
+    /* -----------IMPACTO----------- */
+
+    .img-libro img {
+        width: 70%;
+    }
+
+    .grid-container {
+        width: 80%;
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+    }
+
+    .img-libro {
+        width: 100%;
+    }
+
+    .huella-img {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .huella-img img {
+        width: 50%;
+    }
+
+    .comunidades {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .grid-img img {
+        width: 80%;
+    }
+
+    .individual {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
 }
+
 @media screen and (max-width: 600px) {
     header {
         font-size: 1rem;
-    }
-
-    .grid-navegacion {
-        width: 100%;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: #6454d1;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        padding: 5px;
-    }
-
-    .grid-navegacion a  {
-        display: grid;
-        justify-content: center;
-    
-    }
-
-    .grid-navegacion ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 5px;
     }
 
     .grid-galeria {
@@ -413,7 +583,7 @@ main {
         display: grid;
         margin-top: 20px;
         grid-template-columns: 1fr;
-        grid-auto-rows: 350px;
+        grid-auto-rows: auto;
         grid-gap: 10px;
     }
 
@@ -438,10 +608,12 @@ main {
     .main-section p {
         width: 100%;
     }
+
     .mapa iframe {
         width: 100%;
     }
 
+    /* -----------FOOTER----------- */
     .footer {
         display: flex;
         width: 100%;
