@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [Libreando](libreando.com.ar)
 
-- 🌱 I’m currently learning **Desarroollo web**
+- 🌱 I’m currently learning **Desarrollo web**
 
 - 👯 I’m looking to collaborate on [Donaciones Libreando](https://github.com/martu0304/donaciones.libreando.git)
 
