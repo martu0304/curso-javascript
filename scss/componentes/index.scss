@@ -51,25 +51,26 @@ main {
             width: nth($width, 2);
             padding: 0;
         }
-            a {
-                button {
-                    font-family: 'riftsoft-regular', 'sans-serif';
-                    font-size: medium;
-                    font-weight: 300;
-                    background-color: $color-principal;
-                    color: $color-terciario;
-                    border: none;
-                    padding: 5px 20px 6px 20px;
-                    border-radius: 20px;
-                    align-items: center;
-                    margin: 10px 0 20px 0;
-                    transition: 0.5s;
 
-                    &:hover {
-                        @extend %hover-boton;
-                    }
+        a {
+            button {
+                font-family: 'riftsoft-regular', 'sans-serif';
+                font-size: medium;
+                font-weight: 300;
+                background-color: $color-principal;
+                color: $color-terciario;
+                border: none;
+                padding: 5px 20px 6px 20px;
+                border-radius: 20px;
+                align-items: center;
+                margin: 10px 0 20px 0;
+                transition: 0.5s;
+
+                &:hover {
+                    @extend %hover-boton;
                 }
             }
+        }
 
 
         .galeria {
@@ -92,29 +93,36 @@ main {
 
             .item-galeria-column {
                 grid-column: span 2;
-                    img {
+
+                img {
                     width: nth($width, 1);
                     height: 100%;
                     object-fit: cover;
                 }
             }
-            .item-galeria-feria{
+
+            .item-galeria-feria {
                 grid-column: span 1;
-                img{
+
+                img {
                     width: nth($width, 1);
                     height: 100%;
                     object-fit: cover;
                 }
             }
 
-            .item-galeria{
-                width: nth($width, 1);
-                height: 100%;
-                object-fit: cover;
+            .item-galeria {
+                grid-column: span 1;
+
+                img {
+                    width: nth($width, 1);
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
+
 
         }
-        }
-
-
     }
 }
