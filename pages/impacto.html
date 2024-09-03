@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto</title>
-    <!-- Enlace a la hoja de estilos CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="description"
+        content="Descubrí el impacto positivo de donar libros a Libreando. Aprende sobre cómo tu contribución ayuda al medio ambiente, fomenta la lectura y apoya a la comunidad.">
+    <meta name="keywords"
+        content="Libros, Lectura, Libro, libro, Donaciones, Libreando, libros, comunidad, sostenibilidad, leer, economía circular, club de lectura, libros usados, sustentabilidad, economía circular, huella de carbono, impacto ambiental">
+    <title>Impacto de las donaciones | Libreando</title>
     <!-- Enlace a Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="shortcut icon" href="..\assets\icons\favicon.ico">
 </head>
 
 <body>
@@ -18,8 +23,8 @@
         <!-- BARRA navegacion -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a href="https://www.libreando.com.ar" target="_blank"><img
-                        src="../assets/images/logo-blanco-sin-fondo.png" alt="donaciones libreando"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/images/logo-blanco-sin-fondo.png"
+                        alt="logo blanco de Libreando"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -27,24 +32,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="navbar-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="navbar-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                más
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item-lib" href="./testimonios.html">Testimonios</a></li>
-                                <li><a class="dropdown-item-lib" href="./impacto.html">Impacto</a></li>
-                                <li><a class="dropdown-item-lib" href="./contacto.html">Contacto</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item-lib" href="./faqs.html">FAQs</a></li>
-                            </ul>
-                        </li>
+                        <li><a class="nav-item" aria-current="page" href="../index.html">Home</a></li>
+                        <li><a class="nav-item" href="./testimonios.html">Testimonios</a></li>
+                        <li><a class="nav-item" href="./impacto.html">Impacto</a></li>
+                        <li><a class="nav-item" href="./contacto.html">Contacto</a></li>
+                        <li><a class="nav-item" href="./faqs.html">FAQs</a></li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -57,13 +49,14 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
         <section class="main-section">
-            <h1>Impacto</h1>
+            <h1>El Impacto de Donar: Sostenibilidad y Comunidad</h1>
             <h2>El impacto ambiental de la industria del libro: ¿un futuro sostenible?</h2>
             <p>El mundo de los libros nos abre puertas a un sinfín de conocimientos y aventuras. Sin embargo, detrás de
                 cada página impresa se esconde un impacto ambiental que no podemos ignorar. La industria editorial, a
                 pesar de su innegable valor cultural, genera una huella ecológica considerable.</p>
             <div class="img-libro">
-                <img src="../assets/images/libro-sustentable.jpg" alt="libro-abierto">
+                <img src="../assets/images/libro-sustentable.jpg"
+                    alt="libro abierto con un paisaje verde lleno de árboles, arbustos y un río. Detrás se ve una montaña y la luna">
             </div>
             <div class="grid-container">
                 <div class="huella">
@@ -79,12 +72,14 @@
                         estima que cada año se talan 15 mil millones de árboles para la producción de libros.</p>
                 </div>
                 <div class="huella-img">
-                    <img src="../assets/images/huella.jpg" alt="huella-ambiental">
+                    <img  src="../assets/images/huella.jpg"
+                        alt="Cuatro manos sosteniendo una esfera de pasto con la imagen de un planisferio de agua. De fondo, hojas verdes.">
                 </div>
                 <div class="huella-img">
-                    <img src="../assets/images/fabrica.jpg" alt="fabrica">
+                    <img  src="../assets/images/fabrica.jpg"
+                        alt="Dibujo de una fábrica con varias chimeneas echando humo">
                 </div>
-                <div class="factores">
+                <div class="huella">
                     <h2>Más allá del papel: otros factores a considerar</h2>
                     <p>La impresión y distribución de libros también contribuyen significativamente al impacto
                         ambiental. El
@@ -93,7 +88,7 @@
                         algunos
                         de los aspectos que debemos tener en cuenta.</p>
                 </div>
-                <div class="comunidades">
+                <div class="huella">
                     <h2>¿Qué podemos hacer como lectores y como comunidades?</h2>
                     <p>Si bien la industria editorial tiene un largo camino por recorrer para minimizar su huella
                         ecológica,
@@ -101,11 +96,12 @@
                         impacto.
                     </p>
                 </div>
-                <div class="grid-img">
-                    <img src="../assets/images/lectura-naturaleza.jpg" alt="lecturas-naturaleza">
+                <div class="huella-img">
+                    <img  src="../assets/images/lectura-naturaleza.jpg"
+                        alt="hombre recostado sobre el pasto, debajo de un árbol leyendo">
                 </div>
                 <div class="individual">
-                    <h4>#1 El intercambio de libros: una alternativa sostenible</h4>
+                    <h3>#1 El intercambio de libros: una alternativa sostenible</h3>
                     <p>Las plataformas online y físicas de intercambio de libros son una excelente manera de acceder a
                         nuevos
                         títulos sin generar residuos ni consumir recursos adicionales. Al fomentar la reutilización y el
@@ -115,20 +111,20 @@
                         promueven una cultura de consumo más responsable.</p>
                 </div>
                 <div class="individual">
-                    <h4>#2 Comprar libros de segunda mano</h4>
+                    <h3>#2 Comprar libros de segunda mano</h3>
                     <p>Intercambiar o comprar libros usados ​​es una excelente manera de darles una nueva vida y evitar
                         la
                         producción de nuevos ejemplares. Plataformas online y tiendas especializadas ofrecen una amplia
                         variedad
                         de opciones.</p>
-                    <h4>#3 Donar libros</h4>
+                    <h3>#3 Donar libros</h3>
                     <p>Si tenés libros que ya no leés, donarlos es una forma de asegurarte de que lleguen a otras
                         personas y
                         no
                         terminen en la basura.</p>
                 </div>
                 <div class="individual">
-                    <h4>#4 Considerar el formato electrónico</h4>
+                    <h3>#4 Considerar el formato electrónico</h3>
                     <p>Si bien los libros físicos tienen un encanto inigualable, los libros electrónicos pueden ser una
                         alternativa más sostenible, especialmente para libros que no requieren una gran calidad de
                         impresión. Un
@@ -137,10 +133,11 @@
                         90% menor que la de un libro impreso.</p>
                 </div>
                 <div class="grid-img">
-                    <img src="../assets/images/sostenibilidad.jpg" alt="sostenibilidad">
+                    <img src="../assets/images/sostenibilidad.jpg"
+                        alt="imagen de un árbol delante de una pared espejada y un piso igualmente espejado">
                 </div>
                 <div class="individual-center">
-                    <h4>#5 Apoyar editoriales comprometidas con la sostenibilidad</h4>
+                    <h3>#5 Apoyar editoriales comprometidas con la sostenibilidad</h3>
                     <p>Cada vez más editoriales están adoptando prácticas ecoamigables, como el uso de papel reciclado,
                         tintas
                         no tóxicas y procesos de impresión eficientes. Investigá qué editoriales están tomando medidas
@@ -182,8 +179,8 @@
                             src="../assets/images/logo-youtube.png" alt="you-tube"></a>
                 </div>
                 <div>
-                    <p>© 2024 Libreando. Todos los derechos reservados.</p>
-                    <p>Images by Freepik</p>
+                    <p>© 2024 Libreando. Todos los derechos reservados. </br>
+                        Images by Freepik</p>
                 </div>
             </div>
             <div class="footer-der">

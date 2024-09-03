@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'riftsoft-demi';
+    src: url('../assets/fonts/riftsoft-demi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'riftsoft-regular';
+    src: url('../assets/fonts/riftSoft-regular.woff') format('woff');
+}
+
+
+//! RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'riftsoft-demi', sans-serif;
+    font-size: 3rem;
+    color: $color-principal;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'riftsoft-demi', sans-serif;
+    font-size: 1.7rem;
+    color: $color-principal;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'riftsoft-demi', sans-serif;
+    font-size: 1.3rem;
+    color: $color-secundario;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
