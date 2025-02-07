@@ -3,9 +3,9 @@
 
 - 🔭 I’m currently working on [Libreando](libreando.com.ar)
 
-- 🌱 I’m currently learning **Desarrollo web**
+- 🌱 I’m currently learning **JavaScript**
 
-- 👯 I’m looking to collaborate on [Donaciones Libreando](https://github.com/martu0304/donaciones.libreando.git)
+- 👯 I’m looking to collaborate on [Curso JavaScript](https://github.com/martu0304/dcurso-javascript.git)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
