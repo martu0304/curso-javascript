@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **JavaScript**
 
-- 👯 I’m looking to collaborate on [Curso JavaScript](https://github.com/martu0304/dcurso-javascript.git)
+- 👯 I’m looking to collaborate on [Curso JavaScript](https://github.com/martu0304/curso-javascript.git)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
