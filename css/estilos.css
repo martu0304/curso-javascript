@@ -23,6 +23,11 @@ header .navbar div div form button:hover, main section a button:hover, main .mai
   padding: 0;
   box-sizing: border-box; }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 h1 {
   font-family: 'riftsoft-demi', sans-serif;
   font-size: 3rem;
@@ -292,6 +297,36 @@ main .main-section form {
     transition: 0.5s; }
     main .main-section form button svg {
       margin: 0 5px 3px 0; }
+
+main .main-section form p {
+  justify-self: center; }
+
+.form-container {
+  margin-bottom: 0px; }
+
+.form-parrafo {
+  justify-self: center;
+  width: 100%; }
+
+.boton-storage {
+  font-family: 'riftsoft-regular', 'sans-serif';
+  font-size: medium;
+  font-weight: 300;
+  background-color: #6454d1;
+  color: #ffffff;
+  border: none;
+  padding: 5px 20px 6px 20px;
+  border-radius: 20px;
+  align-items: center;
+  margin: 10px 0 20px 0px;
+  text-align: center;
+  justify-self: center; }
+  .boton-storage:hover {
+    font-family: 'riftsoft-demi', 'sans-serif';
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff158a;
+    transition: 0.5s; }
 
 main .main-section img {
   width: 80%;

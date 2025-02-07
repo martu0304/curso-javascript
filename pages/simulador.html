@@ -38,7 +38,7 @@
                         <li><a class="nav-item" href="./testimonios.html">Testimonios</a></li>
                         <li><a class="nav-item" href="./impacto.html">Impacto</a></li>
                         <li><a class="nav-item" href="./contacto.html">Contacto</a></li>
-                        <li><a class="nav-item" href="./javascript.html">JS</a></li>
+                        <li><a class="nav-item" href="./simulador.html">Simulador</a></li>
                         <li><a class="nav-item" href="./faqs.html">FAQs</a></li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -54,25 +54,16 @@
         <section class="main-section">
             <h1>¡Descubrí cuánto podés ahorrar donando libros!</h1>
             <p>Cada libro que donás a Libreando no solo fomenta la lectura en la comunidad, sino que también te premia con importantes descuentos en tu suscripción. Ingresá la cantidad de libros que querés donar y conocé cuántos meses gratis podés obtener. ¡Un pequeño aporte que genera un gran impacto!</p>
-        </section>
-        <!-- <section class="main-section">
-            <ul>
-                <li>1 libro donado: Pagás $4000 el próximo mes.</li>
-                <li>2 libros donados: Pagás $3000 el próximo mes.</li>
-                <li>3 libros donados: Pagás $2000 el próximo mes.</li>
-                <li>4 libros donados: Pagás $1000 el próximo mes.</li>
-                <li>5 o más libros donados: Obtenés 1 mes gratis.</li>
-            </ul>
-        </section> -->
-        <section>
-            <h2>Utilizá el simulador para saber cuánto descuento podés obtener 📚</h2>
-
-            <div class="form-container">
-            <label for="libros">Ingresá la cantidad de libros que quisieras donar:</label>
-            <input type="number" id="libros" min="0" placeholder="Ingresá un número">
-            <button onclick="calcularSuscripcion()">Calcular Beneficio</button>
+            <h2>Averiguá tu descuento 📚</h2>            
+            <form id="formularioDescuento" class="form-container">
+                <label for="libros">Ingresá la cantidad de libros que quisieras donar:</label>
+                <input type="number" class="form-control" id="libros" min="0" placeholder="Ingresá un número">
+                <button type="submit" id="calcularBtn">Calcular Beneficio</button>
                 <p id="resultado"></p>
-            </div>
+            </form>
+            
+            <div id="formLibros"></div>
+            <div id="listaLibros"></div>
         </section>
     </main>
     <!-- PIE DE PAGINA -->
