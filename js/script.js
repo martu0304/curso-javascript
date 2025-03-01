@@ -8,7 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarLibrosGuardados();
 });
 
-function calcularDescuento() {
+function cargarDescuentos() {
+    return fetch("../descuentos.json")
+        .then(response => response.json())
+        .then(data => data.descuentos)
+        .catch(error => {
+            console.error("Error al cargar el archivo JSON:", error);
+            return [];
+        });
+}
+
+async function calcularDescuento() {
     const precioMensual = 5000;
     let librosDonados = parseInt(document.getElementById("libros").value, 10);
     let resultado = document.getElementById("resultado");
@@ -17,6 +27,7 @@ function calcularDescuento() {
     // Limpiar contenido previo
     resultado.innerText = "";
     formLibros.innerHTML = "";
+    document.getElementById("libros").value = "";  // Limpiar el campo de número de libros
 
     // Validar entrada
     if (isNaN(librosDonados) || librosDonados <= 0) {
@@ -24,18 +35,27 @@ function calcularDescuento() {
         return;
     }
 
-    // Calcular descuento
-    let descuento = librosDonados * 1000;
-    descuento = Math.min(descuento, precioMensual); // No puede superar el costo mensual
-    let totalAPagar = precioMensual - descuento;
-    resultado.innerText = `📚 Donando ${librosDonados} libro(s)\n💸 Obtenés un descuento de $${descuento}\n✅ Próximo mes: $${totalAPagar}`;
+    // Cargar los descuentos desde el archivo JSON
+    let descuentos = await cargarDescuentos();
+
+    // Buscar el descuento correspondiente
+    let descuento = descuentos.find(d => d.libros === librosDonados);
+    if (!descuento) {
+        resultado.innerText = "⚠️ No se encuentra descuento para esa cantidad de libros.";
+        return;
+    }
+
+    // Calcular el monto a pagar después del descuento
+    let montoDescuento = descuento.descuento;
+    let totalAPagar = precioMensual - montoDescuento;
+    resultado.innerText = `📚 Donando ${librosDonados} libro(s)\n💸 Obtenés un descuento de $${montoDescuento}\n✅ Próximo mes: $${totalAPagar}`;
     if (librosDonados >= 5) resultado.innerText += `\n🎉 ¡Felicitaciones! Obtuviste un mes gratis`;
 
     // Agregar título del formulario solo si no existe
     if (!document.getElementById("tituloFormulario")) {
         let tituloFormulario = document.createElement("h2");
         tituloFormulario.id = "tituloFormulario";
-        tituloFormulario.innerText = "📚 Contanos los libros que querés donar";
+        tituloFormulario.innerText = "📚 Contanos los libros que a donar";
         tituloFormulario.classList.add("form-titulo");
         formLibros.appendChild(tituloFormulario);
     }
@@ -74,12 +94,10 @@ function calcularDescuento() {
 }
 
 function guardarLibros() {
-    // Eliminar los datos previos del localStorage antes de guardar los nuevos
     localStorage.removeItem("librosDonados");
-    let librosDonados = document.querySelectorAll(".input-libro"); // Captura todos los inputs y selects
+    let librosDonados = document.querySelectorAll(".input-libro");
     let libros = [];
-    
-    // Recorrer los inputs en grupos de 3 (título, autor, estado)
+
     for (let i = 0; i < librosDonados.length; i += 3) {
         let titulo = librosDonados[i].value.trim();
         let autor = librosDonados[i + 1].value.trim();
@@ -95,11 +113,9 @@ function guardarLibros() {
         return;
     }
 
-    // Guardar en localStorage
     localStorage.setItem("librosDonados", JSON.stringify(libros));
-    
-    // Mostrar los libros guardados
     mostrarLibrosGuardados();
+    limpiarFormulario();  // Limpiar el formulario después de guardar los libros
 }
 
 function mostrarLibrosGuardados() {
@@ -120,13 +136,45 @@ function mostrarLibrosGuardados() {
         libros.forEach((libro) => {
             let libroItem = document.createElement("p");
             libroItem.classList.add("form-parrafo");
-            libroItem.innerHTML = `📖 <strong>${libro.titulo}</strong> - ${libro.autor} (${libro.estado})`;
+            libroItem.innerHTML = `📖 <strong>${libro.titulo}</strong> ${libro.autor} - Estado, ${libro.estado}`;
             listaLibros.appendChild(libroItem);
         });
+
+        // Agregar botón para eliminar libros guardados
+        let eliminarBtn = document.createElement("button");
+        eliminarBtn.classList.add("boton-storage");
+        eliminarBtn.innerText = "Eliminar Libros Guardados";
+        eliminarBtn.id = "eliminarBtn";
+        eliminarBtn.addEventListener("click", eliminarLibros);
+        listaLibros.appendChild(eliminarBtn);
     } else {
         let mensajeVacio = document.createElement("p");
         mensajeVacio.classList.add("form-parrafo");
         mensajeVacio.innerText = "Todavía no cargaste libros.";
         listaLibros.appendChild(mensajeVacio);
     }
+}
+
+function eliminarLibros() {
+    localStorage.removeItem("librosDonados");
+    mostrarLibrosGuardados();
+    // Eliminar también el mensaje de descuento
+    let resultado = document.getElementById("resultado");
+    resultado.innerText = "";
+    
+    // Mostrar alerta con SweetAlert
+    Swal.fire({
+        title: "Libros eliminados",
+        text: "Se han eliminado tus libros guardados.",
+        icon: "warning",
+        confirmButtonText: "Aceptar"
+    });
+}
+
+function limpiarFormulario() {
+    // Limpiar los campos del formulario después de guardar los libros
+    let librosDonados = document.querySelectorAll(".input-libro");
+    librosDonados.forEach((input) => {
+        input.value = "";
+    });
 }
